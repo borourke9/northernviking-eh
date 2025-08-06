@@ -13,6 +13,7 @@ export default function NorthernVikingWoodworks() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,6 +89,15 @@ export default function NorthernVikingWoodworks() {
     }
   }
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const handleMobileNavClick = (sectionId: string) => {
+    scrollToSection(sectionId)
+    setIsMobileMenuOpen(false)
+  }
+
   // Prevent hydration errors by ensuring consistent rendering
   if (typeof window === 'undefined') {
     return (
@@ -134,15 +144,15 @@ export default function NorthernVikingWoodworks() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <div
-              className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-light tracking-[0.15em] transition-colors ${
+              className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-light tracking-[0.15em] transition-colors ${
                 isScrolled ? "text-[#2c2c2c]" : "text-white"
               }`}
             >
               NVW
-              <span className="inline-block ml-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light">→</span>
+              <span className="inline-block ml-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light">→</span>
             </div>
 
-            {/* Navigation Links */}
+            {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-8">
               <button
                 onClick={() => scrollToSection("hero")}
@@ -208,6 +218,67 @@ export default function NorthernVikingWoodworks() {
                     isScrolled ? "bg-[#2c2c2c]" : "bg-white"
                   }`}
                 ></span>
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMobileMenu}
+              className={`md:hidden p-2 rounded-md transition-colors ${
+                isScrolled ? "text-[#2c2c2c]" : "text-white"
+              }`}
+              aria-label="Toggle mobile menu"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center">
+                <span className={`w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+                <span className={`w-5 h-0.5 bg-current transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`w-5 h-0.5 bg-current transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+              </div>
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={`md:hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+            <div className="py-4 space-y-4">
+              <button
+                onClick={() => handleMobileNavClick("hero")}
+                className={`block w-full text-left text-lg tracking-[0.15em] uppercase font-medium transition-colors ${
+                  isScrolled ? "text-[#2c2c2c] hover:text-[#8B4513]" : "text-white/90 hover:text-white"
+                }`}
+              >
+                Home
+              </button>
+              <button
+                onClick={() => handleMobileNavClick("about")}
+                className={`block w-full text-left text-lg tracking-[0.15em] uppercase font-medium transition-colors ${
+                  isScrolled ? "text-[#2c2c2c] hover:text-[#8B4513]" : "text-white/90 hover:text-white"
+                }`}
+              >
+                About
+              </button>
+              <button
+                onClick={() => handleMobileNavClick("services")}
+                className={`block w-full text-left text-lg tracking-[0.15em] uppercase font-medium transition-colors ${
+                  isScrolled ? "text-[#2c2c2c] hover:text-[#8B4513]" : "text-white/90 hover:text-white"
+                }`}
+              >
+                Services
+              </button>
+              <button
+                onClick={() => handleMobileNavClick("work")}
+                className={`block w-full text-left text-lg tracking-[0.15em] uppercase font-medium transition-colors ${
+                  isScrolled ? "text-[#2c2c2c] hover:text-[#8B4513]" : "text-white/90 hover:text-white"
+                }`}
+              >
+                Gallery
+              </button>
+              <button
+                onClick={() => handleMobileNavClick("contact")}
+                className={`block w-full text-left text-lg tracking-[0.15em] uppercase font-medium transition-colors ${
+                  isScrolled ? "text-[#2c2c2c] hover:text-[#8B4513]" : "text-white/90 hover:text-white"
+                }`}
+              >
+                Contact
               </button>
             </div>
           </div>
