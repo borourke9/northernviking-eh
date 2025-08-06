@@ -399,7 +399,7 @@ export default function NorthernVikingWoodworks() {
               onClick={() => openLightbox(0)}
             >
               <Image
-                src="/images/bourbon-smoker.png"
+                src="/images/b.jpg"
                 alt="Bourbon Smoker - Featured Project"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
