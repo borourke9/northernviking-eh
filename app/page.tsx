@@ -13,26 +13,32 @@ export default function NorthernVikingWoodworks() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window !== 'undefined') {
-        setIsScrolled(window.scrollY > 50)
-      }
-    }
-    if (typeof window !== 'undefined') {
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
-    }
+    setIsMounted(true)
   }, [])
 
   useEffect(() => {
+    if (!isMounted) return
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [isMounted])
+
+  useEffect(() => {
+    if (!isMounted) return
+    
     // Trigger fade-in animation after component mounts
     const timer = setTimeout(() => {
       setIsLoaded(true)
     }, 100)
     return () => clearTimeout(timer)
-  }, [])
+  }, [isMounted])
 
   const featuredWork = [
     {
@@ -85,11 +91,11 @@ export default function NorthernVikingWoodworks() {
   }
 
   const scrollToSection = (sectionId: string) => {
-    if (typeof document !== 'undefined') {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" })
-      }
+    if (!isMounted) return
+    
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
     }
   }
 
