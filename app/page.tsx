@@ -352,7 +352,7 @@ export default function NorthernVikingWoodworks() {
           {/* Featured Service Image */}
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=384&width=800&text=Carl+Smith's+Woodworking+Shop"
+              src="/images/work.jpg"
               alt="Carl Smith's woodworking shop in Northern Michigan"
               fill
               className="object-cover"
