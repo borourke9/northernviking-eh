@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ModernLightbox } from "@/components/modern-lightbox"
-import { Settings, Hammer, Wrench, ChevronDown, Ruler, Cog, Zap } from 'lucide-react'
+import { Settings, Hammer, Wrench, ChevronDown, Ruler, Cog, Zap, ChevronRight } from 'lucide-react'
 import Image from "next/image"
 
 export default function NorthernVikingWoodworks() {
@@ -16,10 +16,14 @@ export default function NorthernVikingWoodworks() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
+      if (typeof window !== 'undefined') {
+        setIsScrolled(window.scrollY > 50)
+      }
     }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   useEffect(() => {
@@ -35,7 +39,7 @@ export default function NorthernVikingWoodworks() {
       title: "Bourbon Smoker",
       description:
         "This precision-machined CNC lid was created as a prototype for a custom bourbon smoker. Crafted from layered wood stock, it features engraved text, a recessed vent hole for smoke release, and a stylized crest. The piece was designed in Carveco and cut on a ONEFINITY CNC machine, showcasing clean detail and tight tolerance stacking.",
-      image: "/images/b.jpg",
+      image: "/images/bourbon-smoker.png",
       category: "Custom Build",
     },
     {
@@ -81,9 +85,11 @@ export default function NorthernVikingWoodworks() {
   }
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+    if (typeof document !== 'undefined') {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
     }
   }
 
@@ -346,7 +352,7 @@ export default function NorthernVikingWoodworks() {
           {/* Featured Service Image */}
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/work.jpg"
+              src="/images/northern-viking-logo.png"
               alt="Carl Smith's woodworking shop in Northern Michigan"
               fill
               className="object-cover"
@@ -459,7 +465,7 @@ export default function NorthernVikingWoodworks() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-                <Image src="/images/design.jpg" alt="Initial design sketch for CNC project" fill className="object-cover" />
+                <Image src="/placeholder.svg?height=160&width=160&text=Design+Sketch" alt="Initial design sketch for CNC project" fill className="object-cover" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">Design & Planning</h3>
               <div className="text-sm text-[#8B4513] font-medium mb-4">Step 1</div>
@@ -470,7 +476,7 @@ export default function NorthernVikingWoodworks() {
 
             <div className="text-center">
               <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-                <Image src="/images/cad.jpg" alt="Carveco CAD software interface for CNC toolpath setup" fill className="object-cover" />
+                <Image src="/placeholder.svg?height=160&width=160&text=CAD+Modeling" alt="Carveco CAD software interface for CNC toolpath setup" fill className="object-cover" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">CAD Modeling & Toolpath Setup</h3>
               <div className="text-sm text-[#8B4513] font-medium mb-4">Step 2</div>
@@ -481,7 +487,7 @@ export default function NorthernVikingWoodworks() {
 
             <div className="text-center">
               <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-                <Image src="/images/cnc.jpg" alt="ONEFINITY CNC machine in action cutting wood" fill className="object-cover" />
+                <Image src="/placeholder.svg?height=160&width=160&text=CNC+Machining" alt="ONEFINITY CNC machine in action cutting wood" fill className="object-cover" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">Precision CNC Machining</h3>
               <div className="text-sm text-[#8B4513] font-medium mb-4">Step 3</div>
