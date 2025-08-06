@@ -478,7 +478,7 @@ export default function NorthernVikingWoodworks() {
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-                <Image src="/placeholder.svg?height=160&width=160&text=Design+Sketch" alt="Initial design sketch for CNC project" fill className="object-cover" />
+                <Image src="/images/design.jpg" alt="Initial design sketch for CNC project" fill className="object-cover" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">Design & Planning</h3>
               <div className="text-sm text-[#8B4513] font-medium mb-4">Step 1</div>
