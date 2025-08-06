@@ -34,8 +34,8 @@ export default function NorthernVikingWoodworks() {
     {
       title: "Bourbon Smoker",
       description:
-        "Precision-crafted smoking chamber for bourbon infusions. Features custom temperature controls, adjustable vents, removable ash tray, and food-grade stainless steel components for the perfect smoking experience.",
-      image: "/images/bourbon-smoker.png",
+        "This precision-machined CNC lid was created as a prototype for a custom bourbon smoker. Crafted from layered wood stock, it features engraved text, a recessed vent hole for smoke release, and a stylized crest. The piece was designed in Carveco and cut on a ONEFINITY CNC machine, showcasing clean detail and tight tolerance stacking.",
+      image: "/images/b.jpg",
       category: "Custom Build",
     },
     {
@@ -60,21 +60,6 @@ export default function NorthernVikingWoodworks() {
       image:
         "/placeholder.svg?height=600&width=800&text=Wine+Glass+Frame+-+Wall+mounted+display+for+wine+glass+collections",
       category: "Display",
-    },
-    {
-      title: "Birdhouse",
-      description:
-        "Architecturally styled homes for backyard wildlife with weather-resistant design and species-specific dimensions. Features removable cleaning panel and integrated drainage system.",
-      image: "/images/architectural-birdhouse.png",
-      category: "Outdoor",
-    },
-    {
-      title: "Router Table",
-      description:
-        "Custom-built workbench for routing and jig use. Professional-grade workshop table with precision-engineered accessories and integrated dust collection system for serious woodworkers.",
-      image:
-        "/placeholder.svg?height=600&width=800&text=Router+Table+-+Professional+workshop+table+with+dust+collection",
-      category: "Workshop",
     },
   ]
 
@@ -279,10 +264,17 @@ export default function NorthernVikingWoodworks() {
                 <div className="text-xs tracking-[0.3em] text-[#8B4513] uppercase font-semibold mb-8">
                   History & Craftsman
                 </div>
-                <h2 className="font-serif text-3xl lg:text-4xl font-light text-[#2c2c2c] mb-8 leading-tight">
-                  The journey of Carl Smith, from automotive precision to artisan woodworking, and the Northern Michigan
-                  workshop that shapes each creation.
-                </h2>
+                <div className="text-[#666] font-light leading-relaxed mb-8 space-y-4">
+                  <p>
+                    Carl Smith is a seasoned professional from Cheboygan, Michigan, recently retired after over 40 years in the Automotive Industry, specializing in Design, Engineering, and Manufacturing. With a lifelong passion for woodworking, Carl developed a plan to blend his industry knowledge with creative craftsmanship.
+                  </p>
+                  <p>
+                    In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood and non-ferrous metals. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
+                  </p>
+                  <p>
+                    Carl welcomes opportunities to collaborate with local artisans, such as Surgeon River Pottery, to support their prototyping or custom part needs. His workshop is open for reviews of past work and discussions about future projects.
+                  </p>
+                </div>
                 <button
                   onClick={() => scrollToSection("services")}
                   className="text-sm tracking-[0.2em] text-[#666] hover:text-[#2c2c2c] transition-colors uppercase font-medium border-b border-[#e0e0e0] hover:border-[#2c2c2c] pb-1"
@@ -314,10 +306,10 @@ export default function NorthernVikingWoodworks() {
           <div className="text-center mb-16">
             <div className="text-xs tracking-[0.3em] text-[#8B4513] uppercase font-semibold mb-8">CNC Capabilities</div>
             <h2 className="font-serif text-4xl lg:text-5xl font-light text-[#2c2c2c] mb-8 tracking-wide">
-              Precision Engineering Meets Artisan Craftsmanship
+              Real Craftsmanship, Backed by Experience
             </h2>
             <p className="text-lg text-[#666] font-light max-w-3xl mx-auto">
-              State-of-the-art CNC technology combined with 40 years of automotive precision engineering
+              Small-shop CNC woodworking from a retired automotive engineer with 40+ years of hands-on design and manufacturing know-how.
             </p>
           </div>
 
@@ -326,27 +318,27 @@ export default function NorthernVikingWoodworks() {
               <div className="w-20 h-20 mx-auto mb-6 bg-[#8B4513]/10 rounded-full flex items-center justify-center group-hover:bg-[#8B4513]/20 transition-colors">
                 <Ruler className="w-10 h-10 text-[#8B4513]" />
               </div>
-              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Precision Cutting</h3>
+              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Clean, Accurate Cuts</h3>
               <p className="text-sm text-[#666] font-light leading-relaxed">
-                Tolerances within 0.001" for perfect fits and seamless joints in every project
+                Every project starts with careful setup and steady hands—delivering tight fits and smooth finishes with just the right touch.
               </p>
             </div>
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-[#8B4513]/10 rounded-full flex items-center justify-center group-hover:bg-[#8B4513]/20 transition-colors">
                 <Cog className="w-10 h-10 text-[#8B4513]" />
               </div>
-              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Complex Geometries</h3>
+              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Creative Carving & Detail Work</h3>
               <p className="text-sm text-[#666] font-light leading-relaxed">
-                3D machining capabilities for intricate designs and architectural elements
+                From simple outlines to more complex decorative features, Carl brings designs to life with patience and precision.
               </p>
             </div>
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-6 bg-[#8B4513]/10 rounded-full flex items-center justify-center group-hover:bg-[#8B4513]/20 transition-colors">
                 <Zap className="w-10 h-10 text-[#8B4513]" />
               </div>
-              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Rapid Prototyping</h3>
+              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">One-Offs & Prototypes</h3>
               <p className="text-sm text-[#666] font-light leading-relaxed">
-                From concept to finished prototype in days, not weeks
+                Need a custom part or a first-run prototype? Carl can help you shape your idea into something real—quickly and affordably.
               </p>
             </div>
           </div>
@@ -354,8 +346,8 @@ export default function NorthernVikingWoodworks() {
           {/* Featured Service Image */}
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/bourbon-smoker.png"
-              alt="CNC precision woodworking in action"
+              src="/images/work.jpg"
+              alt="Carl Smith's woodworking shop in Northern Michigan"
               fill
               className="object-cover"
             />
@@ -404,22 +396,24 @@ export default function NorthernVikingWoodworks() {
             <div className="flex flex-col justify-center">
               <h3 className="font-serif text-3xl font-light text-[#2c2c2c] mb-6">Precision-Crafted Bourbon Smoker</h3>
               <p className="text-[#666] font-light leading-relaxed mb-6">
-                This custom smoking chamber showcases the perfect marriage of CNC precision and traditional
-                craftsmanship. Features include custom temperature controls, adjustable vents, removable ash tray, and
-                food-grade stainless steel components.
+                This precision-machined CNC lid was created as a prototype for a custom bourbon smoker. Crafted from layered wood stock, it features engraved text, a recessed vent hole for smoke release, and a stylized crest. The piece was designed in Carveco and cut on a ONEFINITY CNC machine, showcasing clean detail and tight tolerance stacking.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#8B4513] rounded-full"></div>
-                  <span className="text-sm text-[#666]">CNC-machined precision joints</span>
+                  <span className="text-sm text-[#666]">Engraved Bourbon Smoker branding</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#8B4513] rounded-full"></div>
-                  <span className="text-sm text-[#666]">Custom temperature control system</span>
+                  <span className="text-sm text-[#666]">Crest design carved into surface</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#8B4513] rounded-full"></div>
-                  <span className="text-sm text-[#666]">Food-grade stainless steel components</span>
+                  <span className="text-sm text-[#666]">CNC-cut circular layering with smoke release port</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full"></div>
+                  <span className="text-sm text-[#666]">Machined using ONEFINITY + Carveco CAD</span>
                 </div>
               </div>
             </div>
@@ -449,6 +443,56 @@ export default function NorthernVikingWoodworks() {
         </div>
       </section>
 
+      {/* Our Process — From Concept to Cut */}
+      <section className="py-24 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-xs tracking-[0.3em] text-[#8B4513] uppercase font-semibold mb-8">Our Process</div>
+            <h2 className="font-serif text-4xl lg:text-5xl font-light text-[#2c2c2c] mb-8 tracking-wide">
+              From Concept to Cut
+            </h2>
+            <p className="text-lg text-[#666] font-light max-w-3xl mx-auto">
+              Every project follows a systematic approach, from initial design to final delivery
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12">
+            <div className="text-center">
+              <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
+                <Image src="/images/design.jpg" alt="Initial design sketch for CNC project" fill className="object-cover" />
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">Design & Planning</h3>
+              <div className="text-sm text-[#8B4513] font-medium mb-4">Step 1</div>
+              <p className="text-sm text-[#666] font-light leading-relaxed">
+                Each project begins with a concept sketch or idea. Dimensions and layout are thoughtfully planned to match client needs.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
+                <Image src="/images/cad.jpg" alt="Carveco CAD software interface for CNC toolpath setup" fill className="object-cover" />
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">CAD Modeling & Toolpath Setup</h3>
+              <div className="text-sm text-[#8B4513] font-medium mb-4">Step 2</div>
+              <p className="text-sm text-[#666] font-light leading-relaxed">
+                The design is imported into Carveco CAD software where Carl prepares it for cutting—refining every detail, depth, and path.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
+                <Image src="/images/cnc.jpg" alt="ONEFINITY CNC machine in action cutting wood" fill className="object-cover" />
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">Precision CNC Machining</h3>
+              <div className="text-sm text-[#8B4513] font-medium mb-4">Step 3</div>
+              <p className="text-sm text-[#666] font-light leading-relaxed">
+                Using his ONEFINITY CNC machine, Carl machines each part from quality hardwood stock. Final pieces are cleaned, fit-checked, and finished by hand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Full Project Gallery */}
       <section id="work" className="py-24 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
@@ -462,7 +506,7 @@ export default function NorthernVikingWoodworks() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredWork.map((work, index) => (
+            {featuredWork.slice(0, 3).map((work, index) => (
               <div key={index} className="group cursor-pointer" onClick={() => openLightbox(index)}>
                 <div className="aspect-[4/5] relative overflow-hidden rounded-lg shadow-sm mb-4">
                   <Image
