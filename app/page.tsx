@@ -13,32 +13,23 @@ export default function NorthernVikingWoodworks() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  useEffect(() => {
-    if (!isMounted) return
-    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
     
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [isMounted])
+  }, [])
 
   useEffect(() => {
-    if (!isMounted) return
-    
     // Trigger fade-in animation after component mounts
     const timer = setTimeout(() => {
       setIsLoaded(true)
     }, 100)
     return () => clearTimeout(timer)
-  }, [isMounted])
+  }, [])
 
   const featuredWork = [
     {
@@ -91,12 +82,28 @@ export default function NorthernVikingWoodworks() {
   }
 
   const scrollToSection = (sectionId: string) => {
-    if (!isMounted) return
-    
     const element = document.getElementById(sectionId)
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  // Prevent hydration errors by ensuring consistent rendering
+  if (typeof window === 'undefined') {
+    return (
+      <div className="min-h-screen bg-white">
+        {/* Server-side fallback */}
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <div className="text-3xl font-serif font-light tracking-[0.15em] text-[#2c2c2c] mb-4">
+              NVW
+              <span className="inline-block ml-2 text-2xl font-light">→</span>
+            </div>
+            <p className="text-[#666]">Loading...</p>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
