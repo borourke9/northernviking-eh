@@ -45,7 +45,7 @@ export default function NorthernVikingWoodworks() {
       title: "Bourbon Smoker",
       description:
         "This precision-machined CNC lid was created as a prototype for a custom bourbon smoker. Crafted from layered wood stock, it features engraved text, a recessed vent hole for smoke release, and a stylized crest. The piece was designed in Carveco and cut on a ONEFINITY CNC machine, showcasing clean detail and tight tolerance stacking.",
-      image: "/placeholder.svg?height=600&width=800&text=Bourbon+Smoker+CNC+Lid+Prototype",
+      image: "/images/b.jpg",
       category: "Custom Build",
     },
     {
