@@ -489,7 +489,7 @@ export default function NorthernVikingWoodworks() {
 
             <div className="text-center">
               <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-                <Image src="/placeholder.svg?height=160&width=160&text=CAD+Modeling" alt="Carveco CAD software interface for CNC toolpath setup" fill className="object-cover" />
+                <Image src="/images/cad.jpg" alt="Carveco CAD software interface for CNC toolpath setup" fill className="object-cover" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">CAD Modeling & Toolpath Setup</h3>
               <div className="text-sm text-[#8B4513] font-medium mb-4">Step 2</div>
@@ -500,7 +500,7 @@ export default function NorthernVikingWoodworks() {
 
             <div className="text-center">
               <div className="relative w-40 h-40 mx-auto mb-8 rounded-lg overflow-hidden shadow-md">
-                <Image src="/placeholder.svg?height=160&width=160&text=CNC+Machining" alt="ONEFINITY CNC machine in action cutting wood" fill className="object-cover" />
+                <Image src="/images/cnc.jpg" alt="ONEFINITY CNC machine in action cutting wood" fill className="object-cover" />
               </div>
               <h3 className="font-serif text-xl font-semibold text-[#2c2c2c] mb-2">Precision CNC Machining</h3>
               <div className="text-sm text-[#8B4513] font-medium mb-4">Step 3</div>
