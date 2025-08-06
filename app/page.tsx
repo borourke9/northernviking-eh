@@ -39,7 +39,7 @@ export default function NorthernVikingWoodworks() {
       title: "Bourbon Smoker",
       description:
         "This precision-machined CNC lid was created as a prototype for a custom bourbon smoker. Crafted from layered wood stock, it features engraved text, a recessed vent hole for smoke release, and a stylized crest. The piece was designed in Carveco and cut on a ONEFINITY CNC machine, showcasing clean detail and tight tolerance stacking.",
-      image: "/images/bourbon-smoker.png",
+      image: "/placeholder.svg?height=600&width=800&text=Bourbon+Smoker+CNC+Lid+Prototype",
       category: "Custom Build",
     },
     {
@@ -352,7 +352,7 @@ export default function NorthernVikingWoodworks() {
           {/* Featured Service Image */}
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/northern-viking-logo.png"
+              src="/placeholder.svg?height=384&width=800&text=Carl+Smith's+Woodworking+Shop"
               alt="Carl Smith's woodworking shop in Northern Michigan"
               fill
               className="object-cover"
