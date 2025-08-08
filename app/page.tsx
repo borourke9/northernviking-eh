@@ -98,24 +98,6 @@ export default function NorthernVikingWoodworks() {
     setIsMobileMenuOpen(false)
   }
 
-  // Prevent hydration errors by ensuring consistent rendering
-  if (typeof window === 'undefined') {
-    return (
-      <div className="min-h-screen bg-white">
-        {/* Server-side fallback */}
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <div className="text-3xl font-serif font-light tracking-[0.15em] text-[#2c2c2c] mb-4">
-              NVW
-              <span className="inline-block ml-2 text-2xl font-light">→</span>
-            </div>
-            <p className="text-[#666]">Loading...</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Lightbox */}
