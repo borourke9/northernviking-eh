@@ -665,7 +665,7 @@ export default function NorthernVikingWoodworks() {
             </div>
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Email</div>
-              <div className="text-xl text-white font-light">carl@cncwoodworking.com</div>
+              <div className="text-xl text-white font-light">hanson@cncwoodworking.com</div>
             </div>
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Location</div>
