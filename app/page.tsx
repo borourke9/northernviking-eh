@@ -52,7 +52,7 @@ export default function NorthernVikingWoodworks() {
       title: "Logo Plaque",
       description:
         "Custom CNC-engraved business signage with intricate detail work. Available in various wood species with custom finishing options, perfect for businesses and personal branding.",
-      image: "/placeholder.svg?height=600&width=800&text=Logo+Plaque+-+CNC+engraved+business+signage+in+premium+wood",
+      image: "/images/IMG_7719.jpg",
       category: "Commercial",
     },
     {
