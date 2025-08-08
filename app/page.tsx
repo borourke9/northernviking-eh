@@ -417,7 +417,7 @@ export default function NorthernVikingWoodworks() {
           {/* Featured Service Image */}
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/work.jpg"
+              src="/images/IMG_7704.jpg"
               alt="Carl Hanson's woodworking shop in Northern Michigan"
               fill
               className="object-cover"
