@@ -344,7 +344,7 @@ export default function NorthernVikingWoodworks() {
                     In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood and non-ferrous metals. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
                   </p>
                   <p>
-                    Carl welcomes opportunities to collaborate with local artisans, such as Surgeon River Pottery, to support their prototyping or custom part needs. His workshop is open for reviews of past work and discussions about future projects.
+                    Carl welcomes opportunities to collaborate with local artisans to support their prototyping or custom part needs. His workshop is open for reviews of past work and discussions about future projects.
                   </p>
                 </div>
                 <button
