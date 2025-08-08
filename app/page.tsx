@@ -289,7 +289,7 @@ export default function NorthernVikingWoodworks() {
             }`}
           >
             <Image
-              src="/images/logoo.png"
+              src="/images/newlogo.png"
               alt="Northern Viking Woodworks - Professional logo"
               width={500}
               height={500}
@@ -358,14 +358,13 @@ export default function NorthernVikingWoodworks() {
 
             {/* Right Image */}
             <div className="relative overflow-hidden order-1 lg:order-2">
-              <div className="aspect-square lg:aspect-auto lg:h-full bg-gray-100 flex items-center justify-center">
-                <div className="text-center text-[#666]">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-[#8B4513]/10 rounded-full flex items-center justify-center">
-                    <Settings className="w-10 h-10 text-[#8B4513]" />
-                  </div>
-                  <p className="text-lg font-light">Carl Hanson</p>
-                  <p className="text-sm text-[#999] mt-2">Master Craftsman Portrait</p>
-                </div>
+              <div className="aspect-square lg:aspect-auto lg:h-full bg-gray-100">
+                <Image
+                  src="/images/work.jpg"
+                  alt="Carl Hanson's workshop and home in Northern Michigan"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>
