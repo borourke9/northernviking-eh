@@ -4,7 +4,7 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Northern Viking Woodworks - Precision CNC Craftsmanship",
-  description: "Precision CNC woodworking crafted in Northern Michigan by Carl Smith",
+  description: "Precision CNC woodworking crafted in Northern Michigan by Carl Hanson",
     generator: 'v0.dev'
 }
 

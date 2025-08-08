@@ -289,8 +289,8 @@ export default function NorthernVikingWoodworks() {
             }`}
           >
             <Image
-              src="/images/nvw-line-logo.png"
-              alt="Northern Viking Woodworks - Line art logo with Viking helmet, crossed hammers, and NVW text"
+              src="/images/logoo.png"
+              alt="Northern Viking Woodworks - Professional logo"
               width={500}
               height={500}
               className="mx-auto opacity-90 drop-shadow-2xl"
@@ -309,7 +309,7 @@ export default function NorthernVikingWoodworks() {
               <div className="relative px-8 py-4 border border-white/30 rounded-full backdrop-blur-sm bg-white/10 hover:bg-white/20 hover:border-white/50 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-white/20">
                 <div className="flex items-center gap-3">
                   <span className="text-sm tracking-[0.1em] uppercase font-semibold drop-shadow-md transition-all duration-300 group-hover:tracking-[0.15em]">
-                    Meet Carl Smith
+                    Meet Carl Hanson
                   </span>
                   <ChevronDown className="w-4 h-4 transition-all duration-300 group-hover:translate-y-1 group-hover:scale-110 drop-shadow-md" />
                 </div>
@@ -338,7 +338,7 @@ export default function NorthernVikingWoodworks() {
                 </div>
                 <div className="text-[#666] font-light leading-relaxed mb-8 space-y-4">
                   <p>
-                    Carl Smith is a seasoned professional from Cheboygan, Michigan, recently retired after over 40 years in the Automotive Industry, specializing in Design, Engineering, and Manufacturing. With a lifelong passion for woodworking, Carl developed a plan to blend his industry knowledge with creative craftsmanship.
+                    Carl Hanson is a seasoned professional from Cheboygan, Michigan, recently retired after over 40 years in the Automotive Industry, specializing in Design, Engineering, and Manufacturing. With a lifelong passion for woodworking, Carl developed a plan to blend his industry knowledge with creative craftsmanship.
                   </p>
                   <p>
                     In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood and non-ferrous metals. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
@@ -363,7 +363,7 @@ export default function NorthernVikingWoodworks() {
                   <div className="w-20 h-20 mx-auto mb-6 bg-[#8B4513]/10 rounded-full flex items-center justify-center">
                     <Settings className="w-10 h-10 text-[#8B4513]" />
                   </div>
-                  <p className="text-lg font-light">Carl Smith</p>
+                  <p className="text-lg font-light">Carl Hanson</p>
                   <p className="text-sm text-[#999] mt-2">Master Craftsman Portrait</p>
                 </div>
               </div>
@@ -419,7 +419,7 @@ export default function NorthernVikingWoodworks() {
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
               src="/images/work.jpg"
-              alt="Carl Smith's woodworking shop in Northern Michigan"
+              alt="Carl Hanson's woodworking shop in Northern Michigan"
               fill
               className="object-cover"
             />
@@ -710,7 +710,7 @@ export default function NorthernVikingWoodworks() {
           <div className="text-xs tracking-[0.3em] text-[#666] uppercase mb-4 font-light">
             Northern Viking Woodworks
           </div>
-          <div className="text-sm text-[#666] font-light">© 2025 Carl Smith • Crafted in Northern Michigan</div>
+          <div className="text-sm text-[#666] font-light">© 2025 Carl Hanson • Crafted in Northern Michigan</div>
         </div>
       </footer>
     </div>

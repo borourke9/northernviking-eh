@@ -39,7 +39,7 @@ export function Navigation() {
             </div>
             <div className="text-gray-900">
               <h1 className="font-semibold text-lg">Northern Viking Woodworks</h1>
-              <p className="text-xs text-gray-600">By Carl Smith</p>
+              <p className="text-xs text-gray-600">By Carl Hanson</p>
             </div>
           </div>
 
