@@ -545,6 +545,21 @@ export default function NorthernVikingWoodworks() {
                     />
                   </div>
                 </div>
+                
+                {/* Scroll Indicators */}
+                <div className="flex justify-center mt-4 gap-2">
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full opacity-60"></div>
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full opacity-60"></div>
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full opacity-60"></div>
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full opacity-60"></div>
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full opacity-60"></div>
+                  <div className="w-2 h-2 bg-[#8B4513] rounded-full opacity-60"></div>
+                </div>
+                
+                {/* Scroll Hint Text */}
+                <div className="text-center mt-2">
+                  <p className="text-xs text-[#666] font-light">Swipe to see more images</p>
+                </div>
               </div>
             </div>
           </div>
