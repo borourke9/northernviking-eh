@@ -449,14 +449,14 @@ export default function NorthernVikingWoodworks() {
               onClick={() => openLightbox(0)}
             >
               <Image
-                src="/images/b.jpg"
+                src="/images/beer.jpg"
                 alt="Bourbon Smoker - Featured Project"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
               <div className="absolute bottom-6 left-6 text-white">
-                <span className="bg-[#8B4513]/80 text-white px-3 py-1 rounded-full text-xs font-medium mb-2 inline-block">
+                <span className="bg-[#8B4513]/80 text-white px-3 py-1 rounded-block">
                   Featured Build
                 </span>
                 <h3 className="font-serif text-2xl font-light">Bourbon Smoker</h3>
@@ -492,7 +492,7 @@ export default function NorthernVikingWoodworks() {
                 <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
                   <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
                     <Image
-                      src="/images/bourbon-smoker.png"
+                      src="/images/top2.jpeg"
                       alt="Bourbon Smoker CNC lid prototype with engraved design and smoke release port"
                       fill
                       className="object-cover rounded-lg"
@@ -510,8 +510,35 @@ export default function NorthernVikingWoodworks() {
                   </div>
                   <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
                     <Image
-                      src="/images/bourbon-smoker.png"
+                      src="/images/top2.jpeg"
                       alt="Custom bourbon smoker top with precision CNC machining and engraved text"
+                      fill
+                      className="object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                    <Image
+                      src="/images/beer.jpg"
+                      alt="Bourbon smoker CNC lid with detailed engraving and precision woodwork"
+                      fill
+                      className="object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                    <Image
+                      src="/images/top3.jpg"
+                      alt="Bourbon smoker CNC lid with intricate wood grain and precision machining"
+                      fill
+                      className="object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                    <Image
+                      src="/images/top4.jpg"
+                      alt="Bourbon smoker CNC lid showcasing detailed engraving and craftsmanship"
                       fill
                       className="object-cover rounded-lg"
                       loading="lazy"
@@ -659,38 +686,16 @@ export default function NorthernVikingWoodworks() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-16 h-16 bg-[#8B4513]/10 rounded-full flex items-center justify-center mb-6">
-                <Wrench className="w-8 h-8 text-[#8B4513]" />
+          <div className="text-center">
+            <div className="bg-gray-50 p-12 rounded-lg max-w-md mx-auto">
+              <div className="w-20 h-20 bg-[#8B4513]/10 rounded-full flex items-center justify-center mb-8 mx-auto">
+                <Wrench className="w-10 h-10 text-[#8B4513]" />
               </div>
-              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Birds Beak Rain Gutter Support</h3>
-              <p className="text-sm text-[#666] font-light leading-relaxed mb-4">
-                Custom architectural water management elements designed for durability and precision fit.
+              <h3 className="font-serif text-2xl font-light text-[#2c2c2c] mb-4">Workshop Updates</h3>
+              <p className="text-lg text-[#666] font-light leading-relaxed mb-6">
+                New projects and workshop developments are in the works. Stay tuned for exciting updates from the Northern Viking Woodworks shop.
               </p>
-              <div className="text-xs text-[#8B4513] uppercase tracking-wide font-semibold">In Progress</div>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-16 h-16 bg-[#8B4513]/10 rounded-full flex items-center justify-center mb-6">
-                <Cog className="w-8 h-8 text-[#8B4513]" />
-              </div>
-              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Fish Mouth Gutter Brackets</h3>
-              <p className="text-sm text-[#666] font-light leading-relaxed mb-4">
-                Precision-engineered mounting solutions with complex geometries for optimal water flow.
-              </p>
-              <div className="text-xs text-[#8B4513] uppercase tracking-wide font-semibold">Design Phase</div>
-            </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-16 h-16 bg-[#8B4513]/10 rounded-full flex items-center justify-center mb-6">
-                <Hammer className="w-8 h-8 text-[#8B4513]" />
-              </div>
-              <h3 className="font-serif text-xl font-light text-[#2c2c2c] mb-4">Deck Furniture Seat Backs</h3>
-              <p className="text-sm text-[#666] font-light leading-relaxed mb-4">
-                Custom outdoor furniture components featuring weather-resistant design and ergonomic comfort.
-              </p>
-              <div className="text-xs text-[#8B4513] uppercase tracking-wide font-semibold">Prototyping</div>
+              <div className="text-xs text-[#8B4513] uppercase tracking-wide font-semibold">Coming Soon</div>
             </div>
           </div>
         </div>
