@@ -492,7 +492,7 @@ export default function NorthernVikingWoodworks() {
                 <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
                   <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
                     <Image
-                      src="/images/top2.jpeg"
+                      src="/images/top2.JPEG"
                       alt="Bourbon Smoker CNC lid prototype with engraved design and smoke release port"
                       fill
                       className="object-cover rounded-lg"
@@ -510,7 +510,7 @@ export default function NorthernVikingWoodworks() {
                   </div>
                   <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
                     <Image
-                      src="/images/top2.jpeg"
+                      src="/images/top2.JPEG"
                       alt="Custom bourbon smoker top with precision CNC machining and engraved text"
                       fill
                       className="object-cover rounded-lg"
