@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://northernvikingwoodworks.com/sitemap.xml 
