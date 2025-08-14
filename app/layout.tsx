@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Northern Viking Woodworks — Custom CNC Woodworking & Fabrication",
-    description: "Precision CNC woodworking and fabrication. From custom one-off projects to large-scale production, made to your exact specifications.",
+    description: "Precision CNC woodworking and custom fabrication. From unique one-off projects to large-scale production, made to your specifications.",
     type: "website",
     url: "https://northernvikingwoodworks.com",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Northern Viking Woodworks - Custom CNC Woodworking",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Northern Viking Woodworks — Custom CNC Woodworking & Fabrication",
     description: "Custom CNC woodworking and precision fabrication, made to your specifications.",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
   viewport: "width=device-width, initial-scale=1",
 }
@@ -44,6 +44,19 @@ export default function RootLayout({
       <head>
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        
+        {/* Open Graph for social previews */}
+        <meta property="og:title" content="Northern Viking Woodworks — Custom CNC Woodworking & Fabrication" />
+        <meta property="og:description" content="Precision CNC woodworking and custom fabrication. From unique one-off projects to large-scale production, made to your specifications." />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://northernvikingwoodworks.com" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Northern Viking Woodworks — Custom CNC Woodworking & Fabrication" />
+        <meta name="twitter:description" content="Custom CNC woodworking and precision fabrication, made to your specifications." />
+        <meta name="twitter:image" content="/og-image.jpg" />
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
