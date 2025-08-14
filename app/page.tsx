@@ -485,6 +485,40 @@ export default function NorthernVikingWoodworks() {
                   <span className="text-sm text-[#666]">Machined using ONEFINITY + Carveco CAD</span>
                 </div>
               </div>
+              
+              {/* Bourbon Smoker Image Gallery */}
+              <div className="mt-8">
+                <h4 className="font-serif text-lg font-light text-[#2c2c2c] mb-4">Gallery</h4>
+                <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
+                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                    <Image
+                      src="/images/bourbon-smoker.png"
+                      alt="Bourbon Smoker CNC lid prototype with engraved design and smoke release port"
+                      fill
+                      className="object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                    <Image
+                      src="/images/b.jpg"
+                      alt="Bourbon Smoker CNC lid with layered wood stock and crest design"
+                      fill
+                      className="object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                    <Image
+                      src="/images/bourbon-smoker.png"
+                      alt="Custom bourbon smoker top with precision CNC machining and engraved text"
+                      fill
+                      className="object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
