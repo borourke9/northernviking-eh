@@ -445,7 +445,7 @@ export default function NorthernVikingWoodworks() {
           {/* Large Featured Project */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
             <div
-              className="relative aspect-square sm:aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
+              className="relative max-h-[280px] md:max-h-none aspect-square sm:aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
               onClick={() => openLightbox(0)}
             >
               <Image
@@ -489,58 +489,58 @@ export default function NorthernVikingWoodworks() {
               {/* Bourbon Smoker Image Gallery */}
               <div className="mt-8">
                 <h4 className="font-serif text-lg font-light text-[#2c2c2c] mb-4">Gallery</h4>
-                <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-3 sm:gap-4 pb-4 scrollbar-hide">
-                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
+                <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory hide-scrollbar">
+                  <div className="relative min-w-[70%] sm:min-w-[200px] aspect-square rounded-xl overflow-hidden snap-start">
                     <Image
                       src="/images/top2.JPEG"
                       alt="Bourbon Smoker CNC lid prototype with engraved design and smoke release port"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="relative min-w-[70%] sm:min-w-[200px] aspect-square rounded-xl overflow-hidden snap-start">
                     <Image
                       src="/images/b.jpg"
                       alt="Bourbon Smoker CNC lid with layered wood stock and crest design"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="relative min-w-[70%] sm:min-w-[200px] aspect-square rounded-xl overflow-hidden snap-start">
                     <Image
                       src="/images/top2.JPEG"
                       alt="Custom bourbon smoker top with precision CNC machining and engraved text"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="relative min-w-[70%] sm:min-w-[200px] aspect-square rounded-xl overflow-hidden snap-start">
                     <Image
                       src="/images/beer.jpg"
                       alt="Bourbon smoker CNC lid with detailed engraving and precision woodwork"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="relative min-w-[70%] sm:min-w-[200px] aspect-square rounded-xl overflow-hidden snap-start">
                     <Image
                       src="/images/top3.jpg"
                       alt="Bourbon smoker CNC lid with intricate wood grain and precision machining"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="relative min-w-[70%] sm:min-w-[200px] aspect-square rounded-xl overflow-hidden snap-start">
                     <Image
                       src="/images/top4.jpg"
                       alt="Bourbon smoker CNC lid showcasing detailed engraving and craftsmanship"
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-cover"
                       loading="lazy"
                     />
                   </div>
