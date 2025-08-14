@@ -443,9 +443,9 @@ export default function NorthernVikingWoodworks() {
           </div>
 
           {/* Large Featured Project */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
             <div
-              className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
+              className="relative aspect-square sm:aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
               onClick={() => openLightbox(0)}
             >
               <Image
@@ -455,11 +455,11 @@ export default function NorthernVikingWoodworks() {
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <span className="bg-[#8B4513]/80 text-white px-3 py-1 rounded-block">
+              <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white">
+                <span className="bg-[#8B4513]/80 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-medium mb-2 inline-block">
                   Featured Build
                 </span>
-                <h3 className="font-serif text-2xl font-light">Bourbon Smoker</h3>
+                <h3 className="font-serif text-lg sm:text-2xl font-light">Bourbon Smoker</h3>
               </div>
             </div>
             <div className="flex flex-col justify-center">
@@ -489,8 +489,8 @@ export default function NorthernVikingWoodworks() {
               {/* Bourbon Smoker Image Gallery */}
               <div className="mt-8">
                 <h4 className="font-serif text-lg font-light text-[#2c2c2c] mb-4">Gallery</h4>
-                <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-4 pb-4 scrollbar-hide">
-                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                <div className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory gap-3 sm:gap-4 pb-4 scrollbar-hide">
+                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
                     <Image
                       src="/images/top2.JPEG"
                       alt="Bourbon Smoker CNC lid prototype with engraved design and smoke release port"
@@ -499,7 +499,7 @@ export default function NorthernVikingWoodworks() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
                     <Image
                       src="/images/b.jpg"
                       alt="Bourbon Smoker CNC lid with layered wood stock and crest design"
@@ -508,7 +508,7 @@ export default function NorthernVikingWoodworks() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
                     <Image
                       src="/images/top2.JPEG"
                       alt="Custom bourbon smoker top with precision CNC machining and engraved text"
@@ -517,7 +517,7 @@ export default function NorthernVikingWoodworks() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
                     <Image
                       src="/images/beer.jpg"
                       alt="Bourbon smoker CNC lid with detailed engraving and precision woodwork"
@@ -526,7 +526,7 @@ export default function NorthernVikingWoodworks() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
                     <Image
                       src="/images/top3.jpg"
                       alt="Bourbon smoker CNC lid with intricate wood grain and precision machining"
@@ -535,7 +535,7 @@ export default function NorthernVikingWoodworks() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="flex-shrink-0 w-64 h-48 relative rounded-lg shadow-md snap-start">
+                  <div className="flex-shrink-0 w-48 h-36 sm:w-64 sm:h-48 relative rounded-lg shadow-md snap-start">
                     <Image
                       src="/images/top4.jpg"
                       alt="Bourbon smoker CNC lid showcasing detailed engraving and craftsmanship"
