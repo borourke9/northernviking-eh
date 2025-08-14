@@ -43,9 +43,8 @@ export default function NorthernVikingWoodworks() {
     {
       title: "Beer Tote",
       description:
-        "Hand-built carrier for six-pack brews featuring ergonomic design and durable construction. Includes integrated bottle opener and weather-resistant finish for craft beer enthusiasts.",
-      image:
-        "/placeholder.svg?height=600&width=800&text=Beer+Tote+-+Handcrafted+wooden+six-pack+carrier+with+bottle+opener",
+        "Production vehicle specific hand-built carrier for six-pack brews featuring ergonomic design and durable construction. Includes integrated bottle opener and weather-resistant finish for craft beer enthusiasts.",
+      image: "/images/IMG_7761_compressed.jpg",
       category: "Lifestyle",
     },
     {
@@ -56,12 +55,11 @@ export default function NorthernVikingWoodworks() {
       category: "Commercial",
     },
     {
-      title: "Wine Glass Frame",
+      title: "Bourbon Smoker Top",
       description:
-        "Wall-mounted frame for glassware display with precision-cut slots for wine glass collections. Features anti-slip backing and adjustable mounting system for secure installation.",
-      image:
-        "/placeholder.svg?height=600&width=800&text=Wine+Glass+Frame+-+Wall+mounted+display+for+wine+glass+collections",
-      category: "Display",
+        "Precision-machined CNC lid prototype for custom bourbon smoker. Crafted from layered wood stock with engraved text, recessed vent hole for smoke release, and stylized crest design.",
+      image: "/images/b.jpg",
+      category: "Custom Build",
     },
   ]
 
@@ -505,6 +503,15 @@ export default function NorthernVikingWoodworks() {
                   <div className="absolute top-4 left-4">
                     <span className="bg-black/60 text-white px-2 py-1 rounded text-xs">{work.category}</span>
                   </div>
+                  {/* Coming Soon overlay for Beer Tote */}
+                  {work.title === "Beer Tote" && (
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <div className="text-xs tracking-[0.3em] uppercase font-semibold mb-2">Coming Soon</div>
+                        <div className="text-lg font-serif font-light">Stay Tuned</div>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <h3 className="font-serif text-lg font-light text-[#2c2c2c] mb-2">{work.title}</h3>
                 <p className="text-sm text-[#666] font-light leading-relaxed line-clamp-2">{work.description}</p>
@@ -587,6 +594,15 @@ export default function NorthernVikingWoodworks() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                  {/* Coming Soon overlay for Beer Tote */}
+                  {work.title === "Beer Tote" && (
+                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <div className="text-xs tracking-[0.3em] uppercase font-semibold mb-2">Coming Soon</div>
+                        <div className="text-lg font-serif font-light">Stay Tuned</div>
+                      </div>
+                    </div>
+                  )}
                 </div>
                 <h3 className="font-serif text-lg font-light text-[#2c2c2c] mb-2">{work.title}</h3>
                 <p className="text-sm text-[#666] font-light leading-relaxed line-clamp-2">{work.description}</p>
