@@ -14,6 +14,7 @@ export default function NorthernVikingWoodworks() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [cuttingBoardImageIndex, setCuttingBoardImageIndex] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +38,7 @@ export default function NorthernVikingWoodworks() {
       title: "Bourbon Smoker",
       description:
         "This precision-machined CNC lid was created as a prototype for a custom bourbon smoker. Crafted from layered wood stock, it features engraved text, a recessed vent hole for smoke release, and a stylized crest. The piece was designed in Carveco and cut on a ONEFINITY CNC machine, showcasing clean detail and tight tolerance stacking.",
-      image: "/images/b.jpg",
+      image: "/images/newtops.jpg",
       category: "Custom Build",
     },
     {
@@ -54,12 +55,14 @@ export default function NorthernVikingWoodworks() {
       image: "/images/IMG_7719.jpg",
       category: "Commercial",
     },
+
     {
-      title: "Bourbon Smoker Top",
+      title: "Cutting Board",
       description:
-        "Precision-machined CNC lid prototype for custom bourbon smoker. Crafted from layered wood stock with engraved text, recessed vent hole for smoke release, and stylized crest design.",
-      image: "/images/b.jpg",
-      category: "Custom Build",
+        "Handcrafted hardwood cutting board in walnut & maple, chamfered edges and food-safe oil finish for daily use.",
+      image: ["/images/cutting.jpg", "/images/12.jpg"][cuttingBoardImageIndex] || "/images/cutting.jpg",
+      images: ["/images/cutting.jpg", "/images/12.jpg"],
+      category: "Kitchen",
     },
   ]
 
@@ -100,13 +103,27 @@ export default function NorthernVikingWoodworks() {
     <div className="min-h-screen bg-white">
       {/* Lightbox */}
       <ModernLightbox
-        images={featuredWork.map((work) => ({
-          src: work.image,
-          alt: work.title,
-          title: work.title,
-          description: work.description,
-          category: work.category,
-        }))}
+        images={featuredWork.flatMap((work) => {
+          if (work.images && work.images.length > 1) {
+            // If work has multiple images, create an entry for each
+            return work.images.map((img, imgIndex) => ({
+              src: img,
+              alt: `${work.title} - View ${imgIndex + 1}`,
+              title: work.title,
+              description: work.description,
+              category: work.category,
+            }));
+          } else {
+            // Single image
+            return [{
+              src: work.image,
+              alt: work.title,
+              title: work.title,
+              description: work.description,
+              category: work.category,
+            }];
+          }
+        })}
         isOpen={lightboxOpen}
         currentIndex={currentImageIndex}
         onClose={closeLightbox}
@@ -339,7 +356,7 @@ export default function NorthernVikingWoodworks() {
                     Carl Hanson is a seasoned professional from Cheboygan, Michigan, recently retired after over 40 years in the Automotive Industry, specializing in Design, Engineering, and Manufacturing. With a lifelong passion for woodworking, Carl developed a plan to blend his industry knowledge with creative craftsmanship.
                   </p>
                   <p>
-                    In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood and non-ferrous metals. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
+                    In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
                   </p>
                   <p>
                     Carl welcomes opportunities to collaborate with local artisans to support their prototyping or custom part needs. His workshop is open for reviews of past work and discussions about future projects.
@@ -449,7 +466,7 @@ export default function NorthernVikingWoodworks() {
               onClick={() => openLightbox(0)}
             >
               <Image
-                src="/images/beer.jpg"
+                src="/images/newtops.jpg"
                 alt="Bourbon Smoker - Featured Project"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -588,6 +605,40 @@ export default function NorthernVikingWoodworks() {
                       </div>
                     </div>
                   )}
+                  {/* Multiple Images indicator for Cutting Board */}
+                  {work.title === "Cutting Board" && work.images && work.images.length > 1 && (
+                    <>
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-[#8B4513]/80 text-white px-2 py-1 rounded text-xs flex items-center gap-1">
+                          <span>📷</span>
+                          <span>{work.images.length}</span>
+                        </span>
+                      </div>
+                      {/* Navigation Arrows */}
+                      <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            // Navigate to previous image
+                            setCuttingBoardImageIndex((prev) => (prev - 1 + 2) % 2);
+                          }}
+                          className="w-8 h-8 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
+                        >
+                          ←
+                        </button>
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            // Navigate to next image
+                            setCuttingBoardImageIndex((prev) => (prev + 1) % 2);
+                          }}
+                          className="w-8 h-8 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
+                        >
+                          →
+                        </button>
+                      </div>
+                    </>
+                  )}
                 </div>
                 <h3 className="font-serif text-lg font-light text-[#2c2c2c] mb-2">{work.title}</h3>
                 <p className="text-sm text-[#666] font-light leading-relaxed line-clamp-2">{work.description}</p>
@@ -660,7 +711,7 @@ export default function NorthernVikingWoodworks() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredWork.slice(0, 3).map((work, index) => (
+            {featuredWork.map((work, index) => (
               <div key={index} className="group cursor-pointer" onClick={() => openLightbox(index)}>
                 <div className="aspect-[4/5] relative overflow-hidden rounded-lg shadow-sm mb-4">
                   <Image
@@ -678,6 +729,40 @@ export default function NorthernVikingWoodworks() {
                         <div className="text-lg font-serif font-light">Stay Tuned</div>
                       </div>
                     </div>
+                  )}
+                  {/* Multiple Images indicator for Cutting Board */}
+                  {work.title === "Cutting Board" && work.images && work.images.length > 1 && (
+                    <>
+                      <div className="absolute top-4 right-4">
+                        <span className="bg-[#8B4513]/80 text-white px-2 py-1 rounded text-xs flex items-center gap-1">
+                          <span>📷</span>
+                          <span>{work.images.length}</span>
+                        </span>
+                      </div>
+                      {/* Navigation Arrows */}
+                      <div className="absolute inset-x-4 top-1/2 -translate-y-1/2 flex justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            // Navigate to previous image
+                            setCuttingBoardImageIndex((prev) => (prev - 1 + 2) % 2);
+                          }}
+                          className="w-8 h-8 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
+                        >
+                          ←
+                        </button>
+                        <button 
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            // Navigate to next image
+                            setCuttingBoardImageIndex((prev) => (prev + 1) % 2);
+                          }}
+                          className="w-8 h-8 bg-black/60 text-white rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
+                        >
+                          →
+                        </button>
+                      </div>
+                    </>
                   )}
                 </div>
                 <h3 className="font-serif text-lg font-light text-[#2c2c2c] mb-2">{work.title}</h3>
@@ -728,11 +813,7 @@ export default function NorthernVikingWoodworks() {
             reality.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Phone</div>
-              <div className="text-xl text-white font-light">(231) 799‑5688</div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Email</div>
               <div className="text-xl text-white font-light">hanson@cncwoodworking.com</div>
