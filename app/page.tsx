@@ -15,6 +15,8 @@ export default function NorthernVikingWoodworks() {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [cuttingBoardImageIndex, setCuttingBoardImageIndex] = useState(0)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,6 +99,35 @@ export default function NorthernVikingWoodworks() {
   const handleMobileNavClick = (sectionId: string) => {
     scrollToSection(sectionId)
     setIsMobileMenuOpen(false)
+  }
+
+  // Touch handlers for mobile image navigation
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+
+    if (isLeftSwipe) {
+      // Swipe left - next image
+      setCuttingBoardImageIndex((prev) => (prev + 1) % 2)
+    } else if (isRightSwipe) {
+      // Swipe right - previous image
+      setCuttingBoardImageIndex((prev) => (prev - 1 + 2) % 2)
+    }
+
+    // Reset touch values
+    setTouchStart(0)
+    setTouchEnd(0)
   }
 
   return (
@@ -340,43 +371,74 @@ export default function NorthernVikingWoodworks() {
         </div>
       </section>
 
-      {/* About Carl Section - Editorial Style */}
-      <section id="about" className="py-0">
+      {/* About Section - Responsive 3-Column Layout */}
+      <section id="about" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          {/* History & Craftsman Section */}
-          <div className="grid lg:grid-cols-2 min-h-screen">
-            {/* Left Content */}
-            <div className="flex items-center justify-center p-12 lg:p-20 order-2 lg:order-1">
-              <div className="max-w-lg">
-                <div className="text-xs tracking-[0.3em] text-[#8B4513] uppercase font-semibold mb-8">
-                  History & Craftsman
+          <div className="nvw-about grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            
+            {/* Left Column - History & Craftsman Text */}
+            <div className="nvw-text space-y-6">
+              <h2 className="nvw-eyebrow text-xs tracking-[0.3em] text-[#8B4513] uppercase font-semibold">
+                History & Craftsman
+              </h2>
+              <div className="space-y-4 text-[#666] font-light leading-relaxed">
+                <p>
+                  Carl Hanson is a seasoned professional from Cheboygan, Michigan, recently retired after over 40 years in the Automotive Industry, specializing in Design, Engineering, and Manufacturing. With a lifelong passion for woodworking, Carl developed a plan to blend his industry knowledge with creative craftsmanship.
+                </p>
+                <p>
+                  In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
+                </p>
+                <p>
+                  Carl welcomes opportunities to collaborate with local artisans to support their prototyping or custom part needs. His workshop is open for reviews of past work and discussions about future projects.
+                </p>
+              </div>
+              <button
+                onClick={() => scrollToSection("services")}
+                className="text-sm tracking-[0.2em] text-[#666] hover:text-[#2c2c2c] transition-colors uppercase font-medium border-b border-[#e0e0e0] hover:border-[#2c2c2c] pb-1"
+              >
+                More →
+              </button>
+            </div>
+
+            {/* Middle Column - Profile Card (Desktop) / Stacked with Right Column (Tablet) */}
+            <div className="space-y-6 md:space-y-8">
+              {/* Profile Card */}
+              <div className="nvw-card bg-[#0f2f1d] p-6 rounded-[14px] shadow-lg text-center">
+                <div className="relative w-48 h-60 sm:w-56 sm:h-72 mx-auto mb-6">
+                  <Image
+                    src="/images/headshot.jpg"
+                    alt="Carl Hanson - Founder & Craftsman"
+                    fill
+                    className="nvw-headshot object-cover rounded-[14px]"
+                  />
                 </div>
-                <div className="text-[#666] font-light leading-relaxed mb-8 space-y-4">
-                  <p>
-                    Carl Hanson is a seasoned professional from Cheboygan, Michigan, recently retired after over 40 years in the Automotive Industry, specializing in Design, Engineering, and Manufacturing. With a lifelong passion for woodworking, Carl developed a plan to blend his industry knowledge with creative craftsmanship.
-                  </p>
-                  <p>
-                    In 2022, he began his journey into CNC Woodworking, focusing on precision machining of wood. In August 2024, Carl took delivery of a ONEFINITY Elite Foreman CNC machine, paired with Carveco Maker CAD software. Since then, he has designed and manufactured a range of prototypes that showcase his attention to detail and deep technical expertise.
-                  </p>
-                  <p>
-                    Carl welcomes opportunities to collaborate with local artisans to support their prototyping or custom part needs. His workshop is open for reviews of past work and discussions about future projects.
-                  </p>
+                <h3 className="nvw-card h4 font-serif text-2xl font-bold text-white mb-2">
+                  Carl Hanson
+                </h3>
+                <p className="nvw-role text-sm text-[#d1fae5] font-medium tracking-wide uppercase">
+                  Founder & Craftsman
+                </p>
+              </div>
+
+              {/* Workshop Image - Only visible on tablet and mobile */}
+              <div className="lg:hidden">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/work.jpg"
+                    alt="Northern Viking Woodworks workshop"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="text-sm tracking-[0.2em] text-[#666] hover:text-[#2c2c2c] transition-colors uppercase font-medium border-b border-[#e0e0e0] hover:border-[#2c2c2c] pb-1"
-                >
-                  More →
-                </button>
               </div>
             </div>
 
-            {/* Right Image */}
-            <div className="relative overflow-hidden order-1 lg:order-2">
-              <div className="aspect-square lg:aspect-auto lg:h-full bg-gray-100">
+            {/* Right Column - Workshop Image (Desktop only) */}
+            <div className="nvw-photo hidden lg:block">
+              <div className="relative h-full rounded-xl overflow-hidden">
                 <Image
                   src="/images/work.jpg"
-                  alt="Carl Hanson's workshop and home in Northern Michigan"
+                  alt="Northern Viking Woodworks workshop"
                   fill
                   className="object-cover"
                 />
@@ -584,7 +646,14 @@ export default function NorthernVikingWoodworks() {
           {/* Project Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredWork.slice(1).map((work, index) => (
-              <div key={index + 1} className="group cursor-pointer" onClick={() => openLightbox(index + 1)}>
+              <div 
+                key={index + 1} 
+                className={`group cursor-pointer ${work.title === "Cutting Board" ? "touch-optimized" : ""}`}
+                onClick={() => openLightbox(index + 1)}
+                onTouchStart={work.title === "Cutting Board" ? handleTouchStart : undefined}
+                onTouchMove={work.title === "Cutting Board" ? handleTouchMove : undefined}
+                onTouchEnd={work.title === "Cutting Board" ? handleTouchEnd : undefined}
+              >
                 <div className="aspect-[4/5] relative overflow-hidden rounded-lg shadow-sm mb-4">
                   <Image
                     src={work.image || "/placeholder.svg"}
@@ -636,6 +705,12 @@ export default function NorthernVikingWoodworks() {
                         >
                           →
                         </button>
+                      </div>
+                      {/* Touch instructions for mobile */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 md:hidden">
+                        <span className="bg-black/60 text-white px-3 py-1 rounded-full text-xs">
+                          Swipe to navigate
+                        </span>
                       </div>
                     </>
                   )}
@@ -712,7 +787,14 @@ export default function NorthernVikingWoodworks() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredWork.map((work, index) => (
-              <div key={index} className="group cursor-pointer" onClick={() => openLightbox(index)}>
+              <div 
+                key={index} 
+                className={`group cursor-pointer ${work.title === "Cutting Board" ? "touch-optimized" : ""}`}
+                onClick={() => openLightbox(index)}
+                onTouchStart={work.title === "Cutting Board" ? handleTouchStart : undefined}
+                onTouchMove={work.title === "Cutting Board" ? handleTouchMove : undefined}
+                onTouchEnd={work.title === "Cutting Board" ? handleTouchEnd : undefined}
+              >
                 <div className="aspect-[4/5] relative overflow-hidden rounded-lg shadow-sm mb-4">
                   <Image
                     src={work.image || "/placeholder.svg"}
@@ -761,6 +843,12 @@ export default function NorthernVikingWoodworks() {
                         >
                           →
                         </button>
+                      </div>
+                      {/* Touch instructions for mobile */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 md:hidden">
+                        <span className="bg-black/60 text-white px-3 py-1 rounded-full text-xs">
+                          Swipe to navigate
+                        </span>
                       </div>
                     </>
                   )}

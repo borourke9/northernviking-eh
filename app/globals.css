@@ -175,3 +175,134 @@ html {
   -ms-overflow-style: none; 
   scrollbar-width: none; 
 }
+
+/* Mobile touch optimization for cutting board navigation */
+@media (max-width: 768px) {
+  .touch-optimized {
+    touch-action: pan-y pinch-zoom;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .touch-optimized img {
+    pointer-events: none;
+  }
+  
+  .touch-optimized button {
+    touch-action: manipulation;
+  }
+}
+
+/* NVW About Section - Large Desktop Optimization */
+.nvw-about { 
+  margin: 0 auto; 
+  padding-inline: 1.25rem; 
+}
+
+@media (min-width: 1024px) {
+  .nvw-about {
+    display: grid;
+    grid-template-columns:
+      minmax(360px, 1.1fr)
+      minmax(300px, 0.85fr)
+      minmax(460px, 1.25fr);
+  }
+}
+
+/* XL: 1280–1439px — make elements larger and reduce whitespace */
+@media (min-width:1280px){
+  .nvw-about{
+    max-width: 1360px;   /* wider container */
+    margin: 0 auto;
+    gap: 1.75rem;        /* slightly tighter gaps */
+    align-items: start;
+    display: grid;
+    grid-template-columns:
+      minmax(360px, 0.95fr)   /* text (a bit narrower) */
+      minmax(360px, 1fr)      /* card (bigger) */
+      minmax(520px, 1.35fr);  /* photo (dominant) */
+  }
+
+  /* Typography scale-up for readability on xl */
+  .nvw-eyebrow { font-size: 1rem; letter-spacing: .09em; }
+  .nvw-text p  { font-size: 1.015rem; line-height: 1.75; }
+
+  /* Card + portrait scale */
+  .nvw-card{
+    max-width: 520px;
+    padding: 2rem;
+    transform: translateY(4px);
+  }
+  .nvw-headshot{
+    width: 280px;        /* bigger portrait */
+    border-radius: 16px;
+    object-fit: cover;
+  }
+  .nvw-card h4{ font-size: 1.35rem; }
+  .nvw-role   { font-size: .98rem; }
+
+  /* Photo: match profile card height */
+  .nvw-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+  }
+  
+  .nvw-photo {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .nvw-photo > div {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* 2XL: 1440px+ — push sizes further and compress inter-column space a hair */
+@media (min-width:1440px){
+  .nvw-about{
+    max-width: 1480px;
+    gap: 1.5rem;        /* slightly tighter to reduce "floaty" feel */
+    grid-template-columns:
+      minmax(360px, 0.9fr)    /* text */
+      minmax(380px, 1.05fr)   /* card */
+      minmax(560px, 1.45fr);  /* photo */
+  }
+  .nvw-headshot{ width: 300px; }
+  .nvw-card{ max-width: 560px; }
+  .nvw-photo img{ height: 100%; }
+}
+
+/* 3XL: 1600px+ — final bump so row fills space confidently */
+@media (min-width:1600px){
+  .nvw-about{ max-width: 1560px; }
+  .nvw-headshot{ width: 320px; }
+  .nvw-card{ max-width: 600px; padding: 2.25rem; }
+  .nvw-photo img{ height: 100%; }
+}
+
+.nvw-photo img { 
+  width: 100%; 
+  height: auto; 
+  border-radius: 14px; 
+  display: block; 
+}
+
+/* Ensure workshop photo shows on all screen sizes */
+.nvw-photo {
+  display: block;
+}
+
+.nvw-photo > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
