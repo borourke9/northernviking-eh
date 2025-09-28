@@ -901,14 +901,14 @@ export default function NorthernVikingWoodworks() {
             reality.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Email</div>
-              <div className="text-xl text-white font-light">hanson@nvw.com</div>
-            </div>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12 max-w-4xl mx-auto px-4">
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Phone</div>
               <div className="text-xl text-white font-light">(231) 445-2241</div>
+            </div>
+            <div className="text-center">
+              <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Email</div>
+              <div className="text-lg lg:text-xl text-white font-light break-words px-2">hanson@northernvikingwoodworks.com</div>
             </div>
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Location</div>
