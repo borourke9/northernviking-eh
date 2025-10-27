@@ -908,9 +908,9 @@ export default function NorthernVikingWoodworks() {
                 (231) 445-2241
               </a>
             </div>
-            <div className="text-center">
+            <div className="text-center overflow-hidden">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Email</div>
-              <a href="mailto:hanson@northernvikingwoodworks.com" className="text-lg lg:text-xl text-white font-light break-words px-2 hover:text-green-300 transition-colors inline-block">
+              <a href="mailto:hanson@northernvikingwoodworks.com" className="text-base lg:text-lg text-white font-light break-all px-4 py-2 rounded-lg border-2 border-orange-500 hover:border-orange-400 hover:text-orange-300 transition-all block mx-2">
                 hanson@northernvikingwoodworks.com
               </a>
             </div>
@@ -920,32 +920,35 @@ export default function NorthernVikingWoodworks() {
             </div>
           </div>
 
-          <div className="max-w-lg mx-auto">
-            <form className="space-y-6">
-              <div>
-                <Input
-                  placeholder="Your name"
-                  className="border-0 border-b border-white/20 rounded-none bg-transparent px-0 py-3 text-white focus:border-amber-400 focus:ring-0 placeholder:text-white/60"
-                />
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
+              <h3 className="text-xl text-white font-light mb-6">What to Include in Your Message</h3>
+              <div className="space-y-4 text-white/80 font-light text-center">
+                <div className="flex items-center justify-center gap-3">
+                  <div className="text-amber-400 text-lg">•</div>
+                  <p>Brief description of your project or custom piece</p>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="text-amber-400 text-lg">•</div>
+                  <p>Desired dimensions and specifications</p>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="text-amber-400 text-lg">•</div>
+                  <p>Timeline or deadline expectations</p>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="text-amber-400 text-lg">•</div>
+                  <p>Budget considerations or range</p>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <div className="text-amber-400 text-lg">•</div>
+                  <p>Wood preferences (if any)</p>
+                </div>
               </div>
-              <div>
-                <Input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="border-0 border-b border-white/20 rounded-none bg-transparent px-0 py-3 text-white focus:border-amber-400 focus:ring-0 placeholder:text-white/60"
-                />
-              </div>
-              <div>
-                <Textarea
-                  placeholder="Tell me about your project..."
-                  rows={3}
-                  className="border-0 border-b border-white/20 rounded-none bg-transparent px-0 py-3 resize-none text-white focus:border-amber-400 focus:ring-0 placeholder:text-white/60"
-                />
-              </div>
-              <Button className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-none text-sm tracking-[0.1em] uppercase font-light">
-                Send Message
-              </Button>
-            </form>
+              <p className="text-white/60 font-light mt-8 italic text-sm">
+                Carl will respond to your inquiry within 2-3 business days to discuss your project in detail.
+              </p>
+            </div>
           </div>
         </div>
       </section>
