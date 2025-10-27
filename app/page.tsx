@@ -904,11 +904,15 @@ export default function NorthernVikingWoodworks() {
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12 max-w-4xl mx-auto px-4">
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Phone</div>
-              <div className="text-xl text-white font-light">(231) 445-2241</div>
+              <a href="tel:+12314452241" className="text-xl text-white font-light hover:text-green-300 transition-colors">
+                (231) 445-2241
+              </a>
             </div>
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Email</div>
-              <div className="text-lg lg:text-xl text-white font-light break-words px-2">hanson@northernvikingwoodworks.com</div>
+              <a href="mailto:hanson@northernvikingwoodworks.com" className="text-lg lg:text-xl text-white font-light break-words px-2 hover:text-green-300 transition-colors inline-block">
+                hanson@northernvikingwoodworks.com
+              </a>
             </div>
             <div className="text-center">
               <div className="text-xs tracking-[0.2em] text-white/60 uppercase mb-2">Location</div>
